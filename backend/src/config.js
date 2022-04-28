@@ -7,64 +7,137 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "Chin Nations";
+const description = "Join Chin Nations and help move the 7 nations forward. Shall we all work in harmony or is war inevitable? Join the community and be a part of building this new world.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 1500,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Flag Nation One" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Dark Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 3000,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Two" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Beige Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 4500,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Three" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Sapphire Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 6000,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Four" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Gray Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 7500,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Five" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Purple Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 9000,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Six" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "White Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
+    ],
+  },{
+    growEditionSizeTo: 10500,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Flag Nation Seven" },
+      { name: "Ears" },
+      { name: "Tail" },
+      { name: "Brown Body" },
+      { name: "Mouth" },
+      { name: "Nose" },
+      { name: "Eyes" },
     ],
   },
-];
+ ];  
 
 const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 792,
+  height: 792,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://chinnations.com", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
 
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
-const LIMIT = 2; // Your API key rate limit
+const LIMIT = 10; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'Chin Nations';
+const CONTRACT_SYMBOL = 'CN';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const OWNER_ADDRESS = '0xF74F296b28eDcA9BEa60738BdeD41cD4d8218986';
+const TREASURY_ADDRESS = '0xF74F296b28eDcA9BEa60738BdeD41cD4d8218986';
+const MAX_SUPPLY = 10500; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.001; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 20; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-05-27T15:00:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
-const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const ROYALTY_SHARE = 1500; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_ADDRESS = "0xF74F296b28eDcA9BEa60738BdeD41cD4d8218986"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
@@ -75,8 +148,8 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "What Chincilla will you be?"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafkreihfn23h7wxkheih5jh5oy2sauvibzbtmv6mtsov2cuo23tbe4fhle"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
